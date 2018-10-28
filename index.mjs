@@ -30,6 +30,9 @@ const handlers = {
     },
     ping: (data, callback) => {
         callback(200)
+    },
+    helloWorld : (data, callback) => {
+        callback(200, {"message":"Hello World API"})
     }
 };
  /**
@@ -37,7 +40,8 @@ const handlers = {
   */
  const router = {
       'sample': handlers.sample,
-      'ping': handlers.ping
+      'ping': handlers.ping,
+      'helloworld': handlers.helloWorld
  }
 
  const server = http.createServer((req,res) => {
